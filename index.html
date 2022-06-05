@@ -178,7 +178,7 @@
 					</td>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
+							<span style="font-size:24px"><a href='https://github.com/ckmvigil/WaferSegClassNet'>[GitHub]</a></span><br>
 						</center>
 					</td>
 				</tr>
@@ -191,15 +191,8 @@
 			<tr>
 				<td width=260px>
 					<center>
-						<img class="round" style="width:500px" src="./resources/teaser.png"/>
+						<img class="round" style="width:500px" src="./resources/wafermodelarchitecture_v2.png"/>
 					</center>
-				</td>
-			</tr>
-		</table>
-		<table align=center width=850px>
-			<tr>
-				<td>
-					This was a template originally made for <a href="http://richzhang.github.io/colorization/">Colorful Image Colorization</a>. The code can be found in this <a href="https://github.com/richzhang/webpage-template">repository</a>.
 				</td>
 			</tr>
 		</table>
@@ -211,7 +204,20 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				<p>As the integration density and design intricacy of semiconductor wafers increase, the magnitude and complexity of defects in
+them are also on the rise. Since the manual inspection of wafer defects is costly, an automated artificial intelligence (AI) based
+computer-vision approach is highly desired. The previous works on defect analysis have several limitations, such as low accuracy
+and the need for separate models for classification and segmentation. For analyzing mixed-type defects, some previous works
+					require separately training one model for each defect type, which is non-scalable.</p>
+				<p>In this paper, we present WaferSegClassNet (WSCN), a novel network based on encoder-decoder architecture. WSCN performs
+simultaneous classification and segmentation of both single and mixed-type wafer defects. WSCN uses a “shared encoder” for
+classification, and segmentation, which allows training WSCN end-to-end. We use N-pair contrastive loss to first pretrain the
+encoder and then use BCE-Dice loss for segmentation, and categorical cross-entropy loss for classification. Use of N-pair contrastive
+loss helps in better embedding representation in the latent dimension of wafer maps. WSCN has a model size of only 0.51MB
+and performs only 0.2M FLOPS. Thus, it is much lighter than other state-of-the-art models. Also, it requires only 150 epochs for
+convergence, compared to 4,000 epochs needed by a previous work. We evaluate our model on the MixedWM38 dataset, which
+has 38,015 images. WSCN achieves an average classification accuracy of 98.2% and a dice coefficient of 0.9999. We are the first
+to show segmentation results on the MixedWM38 dataset. The source code can be obtained from https://github.com/ckmvigil/WaferSegClassNet</p>
 			</td>
 		</tr>
 	</table>
