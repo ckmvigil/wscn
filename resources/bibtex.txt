@@ -1,6 +1,6 @@
-@inproceedings{author20XXtitle,
-  title={Please cite me},
-  author={Author, First and Author, Second and Author, Third},
-  booktitle={Conference},
-  year={20XX}
+@article {ref162,
+	title = "WaferSegClassNet - A Light-weight Network for Classification and Segmentation of Semiconductor Wafer Defects",
+	year = "2022",
+	author = "Subhrajit Nag and Dhruv Makwana and R Sai Chandra Teja and Sparsh Mittal and C Krishna Mohan",
+	journal = "Computers in industry",
 }
